@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Dragonas RT</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form id="login-form" action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" id="username" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox" name="remember" id="remember"> Lembre-me</label>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+
+            <div class="register-link">
+                <p>Não tem uma conta? <a href="cadastro.html">Registre-se</a></p>
+            </div>
+
+            <div id="error-message" class="error-message">Usuário não cadastrado. <i class='bx bx-x-circle'></i></div>
+            <div id="sucess-message" class="sucess-message">Sucesso ao entrar. <i class='bx bx-check-circle' ></i></div>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário padrão
+
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var remember = document.getElementById('remember').checked;
+
+            var savedUsername = localStorage.getItem('username');
+            var savedPassword = localStorage.getItem('password');
+
+            if (username === savedUsername && password === savedPassword) {
+                // Se os dados de login coincidirem com os dados salvos e a caixa de seleção "Lembre-me" estiver marcada
+                if (remember) {
+                    // Redirecionar o usuário ou executar outra ação desejada
+                } else {
+                    // Se os dados de login não coincidirem ou a caixa de seleção "Lembre-me" não estiver marcada, mostra a mensagem de erro
+                document.getElementById('sucess-message').style.display = 'block';
+
+// Após 5 segundos, oculta a mensagem de erro
+setTimeout(function() {
+    document.getElementById('sucess-message').style.display = 'none';
+}, 3000);
+
+setTimeout(function(){
+    window.location.href = "../index.html"
+}, 3500)
+                }
+                // Aqui você pode redirecionar o usuário para outra página, por exemplo:
+                // window.location.href = 'pagina-de-sucesso.html';
+            } else {
+                // Se os dados de login não coincidirem ou a caixa de seleção "Lembre-me" não estiver marcada, mostra a mensagem de erro
+                document.getElementById('error-message').style.display = 'block';
+
+                // Após 5 segundos, oculta a mensagem de erro
+                setTimeout(function() {
+                    document.getElementById('error-message').style.display = 'none';
+                }, 5000);
+            }
+        });
+    </script>
+</body>
+</html>

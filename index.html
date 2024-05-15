@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cliente/styles.css">
+    <title>Dragonas RT</title>
+</head>
+<body>
+
+    
+     <nav class="menu">
+        <ul>
+            <!--Esquerda-->
+            <div class="esquerda">
+             <img src="../images/Logo.png" alt="LOGO" width="140px" height="140px">
+            </div>
+
+            <!--Centro-->
+            <div class="centro">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./cliente/InfoServer.html">Server</a></li>
+                <li><a href="./cliente/Contato.html">Contato</a></li>
+                <li><a href="./cliente/Marketplace.html">Marketplace</a></li>
+                <li><a href="./cliente/Donations.html">Donations</a></li>
+            </div>
+
+            <!--Direita-->
+            <div class="direita">
+                <button onclick="SobreHref()">Sobre-nós</button>
+            </div>
+        </ul>
+     </nav>
+     
+     <div class="intro">
+        <h1>DRAGONAS <span>RT</span></h1>
+        <p>Um servidor de <span>Minecraft</span> único.</p>
+        <button onclick="SobreHref()">Conheça</button>
+     </div>
+
+     <script>
+        function SobreHref() {
+            window.location.href = "./cliente/sobre.html"
+        }
+     </script>
+
+</body>
+</html>

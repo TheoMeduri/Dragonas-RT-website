@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    width: 100%;
+    min-height: 100vh;
+      background-image: url(../images/anime-dragon-illustration.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; /* Alteração feita aqui */
+      overflow:hidden;
+  }
+
+  nav {
+    display: flex;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 20px rgba(0,0,0, .2);
+    border-radius: 15px;
+    padding: 20px;
+    width: 98%;
+    max-height: 75px;
+    margin: 15px;
+    backdrop-filter: blur(15px);
+  }
+  
+  span {
+    color: #2e85e9;
+  }
+
+  nav ul {
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+   margin-left: 70px;
+  }
+
+  nav ul .esquerda {
+    margin-top: -46px;
+    margin-left: -27px;
+  }
+
+  nav ul .centro {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 70px;
+   }
+
+  nav ul .centro li {
+    margin-left: 30px;
+    font-size: 20px;
+  }
+
+  nav ul .centro li a {
+    color: #fff;
+    text-decoration: none;
+    transition: .5s ease-in-out;
+    padding: 6px;
+    border-radius: 5px;
+  }
+
+  nav ul .centro li a:hover{
+  background-color: #2e85e9be;
+  box-shadow: 0 0 15px #2e85e9be;
+  }
+
+  nav ul .direita {
+    margin-left: 600px;
+  }
+
+  nav ul .direita button {
+    padding: 10px;
+    background-color: #2e85e9be;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: -5px;
+    font-size: 15px;
+    box-shadow: 0 0 20px #2e85e9be;
+    cursor: pointer;
+  }
+
+  .intro {
+    margin-left: 620px;
+    margin-top: 250px;
+  }
+
+  .intro h1 {
+    font-size: 60px;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(0,0,0, .3);
+  }
+
+  .intro h1 span {
+    color: #2e85e9be;
+  }
+
+  .intro p {
+    color: #fff;
+    margin-left: 50px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.667);
+    font-size: 20px;
+    font-weight: 550;
+  }
+
+  .intro p span {
+    color: #2e85e9dd;
+    font-weight: 600
+  }
+
+  .intro button {
+    padding: 10px;
+    background-color: #2e85e9e6;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-left: 120px;
+    font-size: 35px;
+    box-shadow: 0 0 20px #2e85e9be;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  }
+
+  .intro button:hover {
+    box-shadow: 0 0 25px #2e85e9be,
+                0 0 50px #2e85e9be;
+  }
+
+  .intro button#erro-404 {
+    padding: 10px;
+    background-color: #2e85e9e6;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-left: 90px;
+    font-size: 35px;
+    box-shadow: 0 0 20px #2e85e9be;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  }
+
+  .intro button#erro-404:hover {
+    box-shadow: 0 0 25px #2e85e9be,
+                0 0 50px #2e85e9be;
+  }
+
+  .intro h1#erro{
+    margin-left: 80px;
+    font-size: 60px;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(0,0,0, .3);
+  }
+
+  .intro h1#errospan {
+    color: #2e85e9be;
+  }
+
+  .intro p#error {
+    color: #fff;
+    margin-left: -70px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.667);
+    font-size: 20px;
+    font-weight: 550;
+  }
+
+  .intro p#error span {
+    color: #2e85e9dd;
+    font-weight: 600
+  }

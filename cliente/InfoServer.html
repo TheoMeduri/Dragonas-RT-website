@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Dragonas RT</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  span{
+     color: #2e85e9be;
+  }
+
+  nav {
+    z-index: 5;
+    position: fixed;
+    display: flex;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 20px rgba(0,0,0, .2);
+    border-radius: 15px;
+    padding: 20px;
+    width: 98%;
+    max-height: 75px;
+    margin: 15px;
+    backdrop-filter: blur(15px);
+  }
+
+  nav ul {
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+   margin-left: 70px;
+  }
+
+  nav ul .esquerda {
+    margin-top: -46px;
+    margin-left: -27px;
+  }
+
+  nav ul .centro {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 70px;
+   }
+
+  nav ul .centro li {
+    margin-left: 30px;
+    font-size: 20px;
+  }
+
+  nav ul .centro li a {
+    color: #fff;
+    text-decoration: none;
+    transition: .5s ease-in-out;
+    padding: 6px;
+    border-radius: 5px;
+    text-shadow: 0 0 10px #020202e4;
+  }
+
+  nav ul .centro li a:hover{
+  background-color: #2e85e9be;
+  box-shadow: 0 0 15px #2e85e9be;
+  }
+
+  nav ul .direita {
+    margin-left: 600px;
+  }
+
+  nav ul .direita button {
+    padding: 10px;
+    background-color: #2e85e9be;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: -5px;
+    font-size: 15px;
+    box-shadow: 0 0 50px #2e85e9be;
+    cursor: pointer;
+  }
+
+  .image img {
+    margin-top: -113px;
+  }
+  .image h1 {
+    margin-top: -610px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 15PX #333;
+  }
+  .sobre {
+    margin-top: 500px;
+    width: 100%;
+    height: 700px;
+    background-color: #ffffff;
+  }
+
+  .sobre h1{
+    margin-top: 40px;
+    color: #828282;
+    text-align: center;
+  }
+
+  .sobre .conteudo {
+    display: flex;
+    margin-top: 200px;
+  }
+
+  .sobre .txt {
+    margin-left: 100px;
+    text-align: justify;
+    font-size: 20px;
+    color: #828282
+  }
+
+  .sobre .txt a{
+    font-size: 20px;
+    color: #2e85e9be;
+  }
+
+  .sobre .image img {
+    position: relative;
+    border-radius: 25px;
+    box-shadow: 0 0 50px #2e85e9;
+    margin-left: 400px;
+    animation: img 2s ease-in-out infinite alternate;
+    right: 100px;
+    margin-top: 170px;
+  }
+
+  @keyframes img {
+    0%{
+        top: 0;
+    }
+
+    100%{
+        top: 30px;
+    }
+  }
+
+.footer {
+    background-color: #c8c8c8; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto do rodapé */
+    padding: 20px 0; /* Espaçamento interno do rodapé */
+    text-align: center; /* Alinhamento do texto ao centro */
+    margin-top: 100px;
+    
+}
+
+.footer-content {
+    max-width: 960px; /* Largura máxima do conteúdo do rodapé */
+    display: flex;
+    gap:400px;
+}
+
+.footer-content .esquerda-footer {
+  margin-left: 30px;
+  text-align: justify;
+}
+
+.footer-content .esquerda-footer a{
+  color: #2e85e9;
+}
+
+.footer-content .centro-footer {
+  margin-left: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content .centro-footer ul {
+  list-style: none;
+
+  display: flex;
+
+  position: relative;
+
+  gap: 40px;
+}
+
+.footer-content .centro-footer li {
+  width: 60px;
+  height: 60px;
+
+  background-color: #fff;
+  box-shadow: 0 8 20px #000000a2;
+  border-radius: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  transition: .5s ease-in-out;
+}
+
+.footer-content .centro-footer li:hover{
+  width: 160px;
+  border-radius: 50px;
+}
+
+.footer-content .centro-footer ul li span {
+  position: absolute;
+}
+
+.footer-content .centro-footer li .icon {
+  color: #dedede;
+  font-size: 2em;
+  transition: .5s;
+}
+.footer-content .centro-footer li .text{
+  color: #ffffff;
+  font-size: 18px;
+  transform: scale(0);
+  transition: .5s;
+  transition-delay: .1s ease-in;
+  
+}
+
+.footer-content .centro-footer li:hover .text {
+  transform: scale(1);
+}
+
+.footer-content .centro-footer li:hover .icon {
+  transform: scale(0);
+}
+
+.footer-content .centro-footer ul li::before{
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(45deg, var(--cor1), var(--cor2));
+  inset: 0;
+  opacity: 0;
+}
+
+.footer-content .centro-footer ul li:hover::before{
+  opacity: 1;
+  border-radius: 50px;
+}
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <!--Esquerda-->
+            <div class="esquerda">
+             <img src="../images/Logo.png" alt="LOGO" width="140px" height="140px">
+            </div>
+
+            <!--Centro-->
+            <div class="centro">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="InfoServer.html">Server</a></li>
+                <li><a href="Contato.html">Contato</a></li>
+                <li><a href="Marketplace.html">Marketplace</a></li>
+                <li><a href="Donations.html">Donations</a></li>
+            </div>
+
+            <!--Direita-->
+            <div class="direita">
+                <button onclick="SobreHref()">Sobre-nós</button>
+            </div>
+        </ul>
+     </nav>
+
+     <div class="image">
+        <img src="../images/FundoServer.png" width="100%">
+        <h1>ENTRE NO SERVER DA <span>DRAGONAS RT</span></h1>
+     </div>
+
+     <div class="sobre">
+        <br>
+        <h1>JUNTE-SE AO <span>SERVER</span></h1>
+
+        <div class="conteudo">
+            <div class="txt">
+            <h1>ENTRE NO SERVER<span>.</span></h1>
+            <br>
+            <p>O que fazer para entrar no servidor da <span>Dragonas RT?</span> São pequenos passos que você deve fazer para entrar no mundo vasto da Dragonas RT.<br><br>
+               <span>1. Adicionar servidor:</span> Adicione o servidor da Dragonas RT em seu Minecraft(Java) na versão <span>1.16.5</span>. <b>NAME: <span>Dragonas Server</span></b> --- <b>IP: <span>dragonasrt.online</span></b>, essas são todas as informações que precisa saber para adicionar o servidor.<br><br>
+               <span>2. Adicione os MODS:</span> Em nosso <span>Discord</span> vá no canal <span>MODS SERVER</span>, depois de instalar os mods do canal, abra a pasta <span>mods</span> no Explorador de Arquivos e coloque os mods instalados na pasta.<br><br>
+               <span>3. Chegada no Servidor:</span> Ao entrar no servidor da Dragonas RT, vá no canal <span>resgistro-server</span> em nosso <span>Discord</span> e envie o seu login lá, estrutura:<br><br> <Span>Name:</Span> (seu nome do Minecraft)<br> <span>Hora de entrada:</span> (horário de entrada).<br><br>
+               Seguiu todos os passos e mesmo assim não conseguiu entrar? <a href="Contato.html">Entre em Contato.</a> Nossa equipe está ao seu dispor para te ajudar em qualquer dúvida.</p>
+            </div>
+
+            <div class="image">
+                <img src="../images/anime-style-mythical-dragon-creature.jpg" width="600px" height="300px">
+            </div>
+        </div>
+        <br>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+    
+                    <div class="esquerda-footer">
+                     <p>Páginas Disponíveis</p><br>
+                     <a href="Marketplace.html">Marketplace</a>
+                     <br><a href="Donations.html">Donations</a><br>
+                     <a href="sobre.html">Sobre-nós</a><br>
+                     <a href="InfoServer.html">Server</a><br>
+                     <a href="Contato.html">Contato</a>
+                    </div>
+    
+                    <div class="centro-footer">
+                     <div class="redes-sociais">
+                      <ul>
+                        <a href="https://www.instagram.com/dragonas_studio/">
+                          <li style="--cor1: #FB3997; --cor2: #FECF12;">
+                            <span class="icon"><i class='bx bxl-instagram'></i></span>
+                            <span class="text">Instagram</span>
+                          </li>
+                        </a>
+                        <a href="https://tiktok.com/@dragonasrt.studio">
+                          <li style="--cor1: #27b6f8; --cor2: #ec2f8a;">
+                            <span class="icon"><i class='bx bxl-tiktok'></i></span>
+                            <span class="text">TikTok</span>
+                          </li>
+                        </a>
+                        <a href="../404.html">
+                          <li style="--cor1: #394dff; --cor2: #ffffff;">
+                            <span class="icon"><i class='bx bxl-discord-alt'></i></span>
+                            <span class="text">Discord</span>
+                          </li>
+                        </a>
+                      </ul>
+                     </div>
+                    </div>
+    
+                    <div class="direita-footer">
+                     
+                    </div>
+    
+                </div>
+            </div>
+        </footer>
+     </div>
